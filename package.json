@@ -8,6 +8,7 @@
       "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jan Busfy <busfy.jan@gmail.com>",
+  "url": "https://github.com/BusfyJan/synchronizator",
   "license": "ISC",
   "dependencies": {
       "chokidar": "^1.7.0",

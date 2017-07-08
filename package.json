@@ -1,6 +1,6 @@
 {
   "name": "synchronizator",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Applies all changes from source directory to destination directory",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,11 @@
       "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jan Busfy <busfy.jan@gmail.com>",
-  "url": "https://github.com/BusfyJan/synchronizator",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BusfyJan/synchronizator.git"
+  },
+  "homepage": "https://github.com/BusfyJan/synchronizator",
   "license": "ISC",
   "dependencies": {
       "chokidar": "^1.7.0",

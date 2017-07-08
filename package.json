@@ -1,0 +1,19 @@
+{
+  "name": "synchronizator",
+  "version": "0.0.1",
+  "description": "Applies all changes from source directory to destination directory",
+  "main": "index.js",
+  "scripts": {
+      "start": "node index.js",
+      "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jan Busfy <busfy.jan@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+      "chokidar": "^1.7.0",
+      "clear": "0.0.1",
+      "fifo": "^2.3.0",
+      "filecopy": "^3.0.1",
+      "rimraf": "^2.6.1"
+  }
+}

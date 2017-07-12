@@ -9,6 +9,7 @@ let synchronizator = require('synchronizator');
 
 synchronizator(
     '/path/to/sourceDir',
-    '/path/to/destinationDir'
+    '/path/to/destinationDir',
+    true //perform initial synchronization ?
 );
 ```

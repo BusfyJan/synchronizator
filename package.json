@@ -8,6 +8,15 @@
     "test": "node ./test/test.js"
   },
   "author": "Jan Busfy <busfy.jan@gmail.com>",
+  "keywords": [
+      "sync",
+      "synchronize",
+      "directory",
+      "directories",
+      "watch",
+      "watcher",
+      "mirror"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/BusfyJan/synchronizator.git"

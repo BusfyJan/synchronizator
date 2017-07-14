@@ -11,10 +11,13 @@
   "keywords": [
       "sync",
       "synchronize",
-      "directory",
-      "directories",
+      "synchronized",
       "watch",
       "watcher",
+      "dir",
+      "dirs"
+      "directory",
+      "directories",
       "mirror"
   ],
   "repository": {

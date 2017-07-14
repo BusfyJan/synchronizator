@@ -10,6 +10,13 @@ let synchronizator = require('synchronizator');
 synchronizator(
     '/path/to/sourceDir',
     '/path/to/destinationDir',
-    true //perform initial synchronization ?
+    {
+        performInitialSync: true, //perform initial synchronization?
+        ignored: [ //path substrings to ignore
+            ".git/",
+            "node_modules/",
+            "dirName/test.txt"
+        ]
+    }
 );
 ```

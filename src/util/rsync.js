@@ -1,9 +1,22 @@
-let path = require("path");
 let execSh = require('exec-sh');
 
-module.exports = function(srcDir, destDir, onFinish) {
+let prepareCommandString = function(srcDir, destDir, ignored) {
+    let commandString = "rsync -update -raz ";
+    
+    commandString += ignored
+        .map((ignoredItem) => {
+            return "--exclude " + ignoredItem
+        })
+        .join(" ");
+        
+    commandString += " " + srcDir + "/* " + destDir;
+    
+    return commandString;
+};
+
+module.exports = function(srcDir, destDir, ignored, onFinish) {
     execSh(
-        "rsync -update -raz --progress --exclude .git/ --exclude node_modules/ " + srcDir + " " + path.dirname(destDir),
+        prepareCommandString(srcDir, destDir, ignored),
         true,
         () => {
             console.log("Initial synchronization completed");

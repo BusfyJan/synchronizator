@@ -9,16 +9,16 @@
   },
   "author": "Jan Busfy <busfy.jan@gmail.com>",
   "keywords": [
-      "sync",
-      "synchronize",
-      "synchronized",
-      "watch",
-      "watcher",
-      "dir",
-      "dirs"
-      "directory",
-      "directories",
-      "mirror"
+    "sync",
+    "synchronize",
+    "synchronized",
+    "watch",
+    "watcher",
+    "dir",
+    "dirs",
+    "directory",
+    "directories",
+    "mirror"
   ],
   "repository": {
     "type": "git",
@@ -29,6 +29,7 @@
   "dependencies": {
     "chokidar": "^1.7.0",
     "clear": "0.0.1",
+    "command-exists": "^1.2.2",
     "exec-sh": "^0.2.0",
     "fifo": "^2.3.0",
     "filecopy": "^3.0.1",

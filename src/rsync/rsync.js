@@ -1,3 +1,4 @@
+let commandExists = require('command-exists');
 let execSh = require('exec-sh');
 
 let prepareCommandString = function(srcDir, destDir, ignored) {
@@ -15,13 +16,18 @@ let prepareCommandString = function(srcDir, destDir, ignored) {
 };
 
 module.exports = function(srcDir, destDir, ignored, onFinish) {
-    execSh(
-        prepareCommandString(srcDir, destDir, ignored),
-        true,
-        () => {
-            console.log("Initial synchronization completed");
-            console.log("Starting continous synchronizator");
+    commandExists("rsync", (err, exists) => {
+        if (!exists) {
             onFinish();
+            return;
         }
-    );
+        
+        execSh(
+            prepareCommandString(srcDir, destDir, ignored),
+            true,
+            () => {
+                onFinish();
+            }
+        );
+    });
 };

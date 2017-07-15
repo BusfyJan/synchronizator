@@ -1,19 +1,8 @@
 let actionGatherer = require('./src/action/gatherer.js');
 let actionHandler = require('./src/action/handler.js');
 let actionDisplayer = require('./src/action/displayer.js');
-let rsyncUtil = require('./src/util/rsync.js');
-
-let prepareOptions = function(options) {
-    if (options.performInitialSync === undefined) {
-        options.performInitialSync = false;
-    }
-    
-    if (options.ignored === undefined) {
-        options.ignored = [];
-    }
-    
-    return options;
-};
+let rsyncUtil = require('./src/rsync/rsync.js');
+let prepareOptions = require('./src/options/prepare.js');
 
 let startContinuousSync = function(srcDir, destDir, ignored) {
     console.log("Starting continuous synchronization");

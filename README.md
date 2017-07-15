@@ -70,7 +70,7 @@ Will match paths like this:
 *Ignore file in specified directory*
 ```javascript
 ignored: [
-    "project/someDir/someFile.txt"
+    "someDir/someFile.txt"
 ]
 ```
 Will match paths like this:
@@ -82,6 +82,7 @@ Will match paths like this:
 But won't match paths like this:
 ```
 /someFile.txt
-/someDir/someFile.txt
+/project/someFile.txt
+/project/someDir/subDir/someFile.txt
 ...
 ```

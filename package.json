@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "mocha && istanbul cover _mocha"
+    "test": "mocha && istanbul --include-all-sources --root='./src' cover _mocha"
   },
   "author": "Jan Busfy <busfy.jan@gmail.com>",
   "keywords": [

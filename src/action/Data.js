@@ -17,14 +17,14 @@ module.exports = function(type, path)
      *
      * @var String
      */
-    _this.type = type;
+    _this.type = String(type);
     
     /**
      * Action path
      *
      * @var String
      */
-    _this.path = path;
+    _this.path = String(path);
     
     
     /**

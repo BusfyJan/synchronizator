@@ -1,7 +1,7 @@
 let assert = require('assert');
 
 describe('options\Preparer', () => {
-    let OptionsPreparer = require('../../src/options/Preparer.js');
+    let OptionsPreparer = require('../../../src/options/Preparer.js');
     let optionsPreparer = new OptionsPreparer();
     
     describe('#constructor', () => {

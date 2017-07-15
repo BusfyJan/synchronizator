@@ -1,7 +1,7 @@
 let assert = require('assert');
 
 describe('action\Data', () => {
-    let ActionData = require('../../src/action/Data.js');
+    let ActionData = require('../../../src/action/Data.js');
     
     describe('#constructor', () => {
         it('should return object when instantiated', () => {

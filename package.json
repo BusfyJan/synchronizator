@@ -28,7 +28,6 @@
   "license": "ISC",
   "dependencies": {
     "chokidar": "^1.7.0",
-    "clear": "0.0.1",
     "command-exists": "^1.2.2",
     "exec-sh": "^0.2.0",
     "fifo": "^2.3.0",

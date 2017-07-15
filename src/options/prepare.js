@@ -1,11 +1,10 @@
+let _ = require('lodash');
+
+let defaultOptions = {
+    performInitialSync: false,
+    ignored: []
+};
+
 module.exports = function(options) {
-    if (options.performInitialSync === undefined) {
-        options.performInitialSync = false;
-    }
-    
-    if (options.ignored === undefined) {
-        options.ignored = [];
-    }
-    
-    return options;
+    return _.defaultsDeep(options, defaultOptions);
 };

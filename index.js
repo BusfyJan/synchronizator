@@ -1,7 +1,7 @@
 let actionGatherer = require('./src/action/gatherer.js');
 let actionHandler = require('./src/action/handler.js');
 let actionDisplayer = require('./src/action/displayer.js');
-let rsyncUtil = require('./src/rsync/rsync.js');
+let rsync = require('./src/rsync/rsync.js');
 let prepareOptions = require('./src/options/prepare.js');
 
 let startContinuousSync = function(srcDir, destDir, ignored) {
@@ -23,7 +23,7 @@ module.exports = function(srcDir, destDir, options) {
     }
     
     console.log("Starting initial synchronization");
-    rsyncUtil(srcDir, destDir, options.ignored, () => {
+    rsync(srcDir, destDir, options.ignored, () => {
         console.log("Initial synchronization completed");
         startContinuousSync(srcDir, destDir, options.ignored);
     });

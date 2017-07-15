@@ -1,6 +1,7 @@
 # Synchronizator
 
 [![Build Status](https://travis-ci.org/BusfyJan/synchronizator.svg?branch=master)](https://travis-ci.org/BusfyJan/synchronizator)
+[![Coverage Status](https://coveralls.io/repos/github/BusfyJan/synchronizator/badge.svg?branch=master)](https://coveralls.io/github/BusfyJan/synchronizator?branch=master)
 
 ## Description
 This package is used for synchronizing two directories. All changes made to source directory will be applied to destination directory.

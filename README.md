@@ -1,5 +1,7 @@
 # Synchronizator
 
+[![Build Status](https://travis-ci.org/BusfyJan/synchronizator.svg?branch=master)](https://travis-ci.org/BusfyJan/synchronizator)
+
 ## Description
 This package is used for synchronizing two directories. All changes made to source directory will be applied to destination directory.
 

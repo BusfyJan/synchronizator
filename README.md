@@ -8,9 +8,9 @@ This package is used for synchronizing two directories. All changes made to sour
 
 ## Usage
 ```javascript
-let synchronizator = require('synchronizator');
+let Synchronizator = require('synchronizator');
 
-synchronizator(
+let synchronizator = Synchronizator(
     '/path/to/sourceDir',
     '/path/to/destinationDir',
     {
@@ -22,6 +22,10 @@ synchronizator(
         ]
     }
 );
+
+setInterval(() => {
+    console.log("Sync queue length: " + synchronizator.getSyncQueueLength());
+}, 1000);
 ```
 
 ### Ignored option

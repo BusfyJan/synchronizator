@@ -32,6 +32,20 @@ module.exports = function(srcDir, destDir, options)
     _this.destDir = destDir;
     
     /**
+     * Action gatherer
+     *
+     * @var ActionGatherer
+     */
+    _this.actionGatherer = null;
+    
+    /**
+     * Action handler
+     *
+     * @var ActionHandler
+     */
+    _this.actionHandler = null;
+
+    /**
      * Options
      *
      * @var Object
@@ -45,13 +59,12 @@ module.exports = function(srcDir, destDir, options)
     _this.init = function()
     {
         _this.doInitialSync(() => {
-            let actionHandler = new ActionHandler(_this.srcDir, _this.destDir);
-            
-            new ActionGatherer(
+            _this.actionHandler = new ActionHandler(_this.srcDir, _this.destDir);
+            _this.actionGatherer = new ActionGatherer(
                 _this.srcDir,
                 _this.options.ignored,
                 (actionData) => {
-                    actionHandler.add(actionData);
+                    _this.actionHandler.add(actionData);
                 }
             );
         });
@@ -72,6 +85,16 @@ module.exports = function(srcDir, destDir, options)
         new SyncManager(_this.srcDir, _this.destDir, _this.options.ignored).sync(() => {
             onFinish();
         });
+    };
+    
+    /**
+     * Retrieves sync queue length
+     *
+     * @return int
+     */
+    this.getSyncQueueLength = function()
+    {
+        return _this.actionHandler.getActionsToHandleLength();
     };
     
     _this.init();

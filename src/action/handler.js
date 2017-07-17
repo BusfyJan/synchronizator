@@ -113,5 +113,15 @@ module.exports = function(srcDir, destDir)
         _this.actionsToHandle.push(actionData);
     };
     
+    /**
+     * Retrieves queue length
+     *
+     * @return int
+     */
+    this.getActionsToHandleLength = function()
+    {
+        return _this.actionsToHandle.length;
+    };
+    
     _this.handleActionLoop();
 };

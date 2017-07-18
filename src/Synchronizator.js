@@ -58,8 +58,9 @@ module.exports = function(srcDir, destDir, options)
      */
     _this.init = function()
     {
+        _this.actionHandler = new ActionHandler(_this.srcDir, _this.destDir);
+        
         _this.doInitialSync(() => {
-            _this.actionHandler = new ActionHandler(_this.srcDir, _this.destDir);
             _this.actionGatherer = new ActionGatherer(
                 _this.srcDir,
                 _this.options.ignored,

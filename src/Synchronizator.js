@@ -84,6 +84,7 @@ module.exports = function(srcDir, destDir, options)
         }
         
         new SyncManager(_this.srcDir, _this.destDir, _this.options.ignored).sync(() => {
+            _this.options.onInitialSyncCompleted();
             onFinish();
         });
     };

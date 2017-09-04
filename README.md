@@ -19,13 +19,15 @@ let synchronizator = Synchronizator(
             ".git/",
             "someDir/node_modules/",
             "dirName/test.txt"
-        ]
+        ],
+        onInitialSyncCompleted: function() {
+            console.log("Initial sync completed");
+            setInterval(() => {
+                console.log("Sync queue length: " + synchronizator.getSyncQueueLength());
+            }, 1000);
+        }
     }
 );
-
-setInterval(() => {
-    console.log("Sync queue length: " + synchronizator.getSyncQueueLength());
-}, 1000);
 ```
 
 ### Ignored option

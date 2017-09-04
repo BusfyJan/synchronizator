@@ -1,6 +1,6 @@
 {
   "name": "synchronizator",
-  "version": "2.1.1",
+  "version": "2.2.1",
   "description": "Applies all changes from source directory to destination directory",
   "main": "index.js",
   "scripts": {

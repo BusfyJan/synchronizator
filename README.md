@@ -20,8 +20,8 @@ let synchronizator = Synchronizator(
             "someDir/node_modules/",
             "dirName/test.txt"
         ],
-        onInitialSyncCompleted: function() {
-            console.log("Initial sync completed");
+        onInitCompleted: function() {
+            console.log("Init completed");
             setInterval(() => {
                 console.log("Sync queue length: " + synchronizator.getSyncQueueLength());
             }, 1000);

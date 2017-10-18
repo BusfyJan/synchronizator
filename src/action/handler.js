@@ -77,11 +77,17 @@ module.exports = function(srcDir, destDir)
                     }
                 ).then(() => {
                     onFinish();
+                }).catch((error) => {
+                    console.log("ADD/CHANGE action error: " + error);
                 });
                 break;
               
             case 'unlink':
                 fs.unlink(remoteFilePath, (error) => {
+                    if (error) {
+                        console.log("UNLINK action error: " + error);
+                    }
+                    
                     onFinish();
                 });
                 break;

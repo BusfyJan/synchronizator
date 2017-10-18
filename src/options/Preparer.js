@@ -21,7 +21,7 @@ module.exports = function(options)
      */
     _this.defaultOptions = {
         performInitialSync: false,
-        onInitialSyncCompleted: function() {},
+        onInitCompleted: function() {},
         ignored: []
     };
     
